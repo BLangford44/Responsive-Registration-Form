@@ -1,0 +1,162 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+    text-decoration: none;
+}
+
+label,
+select,
+.copyright{
+    color:slategray;
+}
+
+body,
+.column,
+.radio-opt,
+.check-opt{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background: slategray;
+    color: white;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+fieldset{
+    margin-top: .15em;
+    border:none;
+}
+
+legend{
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+input,
+select,
+textarea{
+    background-color: rgb(236, 235, 235);
+    border: none;
+    border-radius: 5px;
+}
+
+label,
+input{
+    line-height: 3em;
+}
+
+input{
+    padding-left: 1em;
+}
+
+
+select{
+    padding: 1em;
+}
+
+textarea{
+    line-height: 4em;
+    margin-bottom: 2em;
+}
+
+button{
+    width: 95%;
+    background: turquoise;
+    color: white;
+
+    padding: .5em;
+    margin: auto;
+
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.wrapper{
+    margin: auto;
+    max-width: 90%;
+}
+
+.content-break{
+    width: 95%;
+    text-align: center;
+    border-bottom: 4px solid black;
+    margin: auto;
+}
+
+input::placeholder{
+    text-align: right;
+    margin-right: 10px;
+
+    font-size: .8em;
+    font-style: italic;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+    margin-right: 10px;
+}
+
+#zip{
+    max-width: 50%;
+}
+
+.main-footer{
+    margin-bottom: 7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-style: italic;
+}
+
+/*==================== 
+MEDIA QUERIES 
+==================== */
+
+@media screen and (min-width: 768px) {
+
+    .column{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    input,
+    select{
+        flex-basis: 70%;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    .zip-code{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .zip-code label{
+        flex-basis: 30%;
+    }
+
+    #zip{
+        max-width: 25%;
+    }
+
+    textarea{
+        flex-basis: 100%;
+    }
+}

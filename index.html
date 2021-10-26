@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Signup Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="wrapper">
+            <h1 id="header-title">THE CODE REVIEW</h1>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="content-break">
+            <h2>Signup for our newsletter</h2>
+            <p>Get the latest news on how your code is doing right in your inbox.</p>
+        </section>
+
+        <section class="info-entry">
+            <form>
+                <fieldset>
+                    <legend>
+                        <h2>Contact Info</h2>
+                    </legend>
+                    <div class="column">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="user-name" placeholder="Required" required>
+                    </div>
+
+                    <div class="column">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="user-email" placeholder="Required" required>
+                    </div>
+
+                    <div class="column">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="user-phone">
+                    </div>
+
+                    <div class="column">
+                        <label for="address">Street <Address></Address></label>
+                        <input type="text" id="address" name="user-address">
+                    </div>
+
+                    <div class="column">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="user-city">
+                    </div>
+
+                    <div class="column">
+                        <label for="state">State</label>
+                        <select name="state" id=user-state>
+                            <option value="">Choose State</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                        </select>
+                    </div>
+                    <div class="column zip-code">
+                        <label for="zip">Zip Code</label>
+                        <input type="number" id="zip" name="user-zip">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h2>Newsletter</h2>
+                    </legend>
+                    <p>Select the newsletters you would like to receive.</p>
+                    <div class="check-opt">
+                        <div><input type="checkbox" id="check-one"><label for="check-one">HTML News</label></div>
+                        <div><input type="checkbox" id="check-two"><label for="check-two">CSS News</label></div>
+                        <div><input type="checkbox" id="check-three"><label for="check-three">Javascript News</label>
+                        </div>
+                    </div>
+
+                    <p>Newsletter format</p>
+                    <div class="radio-opt">
+                        <div><input type="radio" name="format" id="radio-one"><label for="radio-one">HTML</label></div>
+                        <div><input type="radio" name="format" id="radio-two"><label for="radio-two">Plain text</label>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <p>Other topics you'd like to hear about</p>
+                        <textarea id="other" name="other-info"></textarea>
+                    </div>
+                </fieldset>
+                <div class=column>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </section>
+        <footer class="main-footer">
+            <p class="copyright">Copyright The Code Review</p>
+        </footer>
+    </div>
+
+</body> <!-- End Body -->
