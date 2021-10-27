@@ -5,12 +5,23 @@
 * {
 	box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Merriweather', serif;
 }
 
 label,
 select,
+fieldset p,
 .copyright{
-    color:slategray;
+    color:slategray; /*Set base text color */
+}
+
+body,
+header{
+    background-color: turquoise; /*Set main bg-color*/
+}
+
+.wrapper{
+    background-color: white;
 }
 
 body,
@@ -22,16 +33,14 @@ body,
 }
 
 header{
-    background: slategray;
-    color: white;
-    margin-bottom: 1em;
+    color: black;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
 }
 
 fieldset{
-    margin-top: .15em;
+    margin-top: .25em;
     border:none;
 }
 
@@ -49,22 +58,45 @@ textarea{
 }
 
 label,
-input{
+input,
+select{
     line-height: 3em;
+    transition: line-height 1s, background-color 2s;
 }
 
 input{
     padding-left: 1em;
 }
 
+input:focus{ 
+    line-height: 4em; /*Change input field size*/
+}
 
 select{
     padding: 1em;
+    transition: padding-top 2s, padding-bottom 2s; 
+}
+
+select:focus{
+    padding-top: 1.5em; /*Change input field size*/
+    padding-bottom: 1.5em; /*Change input field size*/
 }
 
 textarea{
-    line-height: 4em;
+    min-height: 125px;
     margin-bottom: 2em;
+    padding: 1em;
+
+    transition: background-color 2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus{
+    /*Change field bg-color and border when selected*/
+    border: 2px solid turquoise;
+    background-color: rgb(171, 206, 203);
 }
 
 button{
@@ -81,6 +113,10 @@ button{
     font-weight: bold;
 }
 
+button:hover{
+    border: 2px solid black;
+}
+
 
 /* ================================= 
   Base Layout Styles
@@ -88,7 +124,6 @@ button{
 
 .wrapper{
     margin: auto;
-    max-width: 90%;
 }
 
 .content-break{
@@ -98,7 +133,20 @@ button{
     margin: auto;
 }
 
-input::placeholder{
+.leg-header{
+    margin-top: 2em;
+}
+
+input::placeholder,
+textarea::placeholder{
+    text-align: left;
+    margin-left: 10px;
+
+    font-size: .8em;
+    font-style: italic;
+}
+
+.required::placeholder{
     text-align: right;
     margin-right: 10px;
 
@@ -109,6 +157,11 @@ input::placeholder{
 input[type="checkbox"],
 input[type="radio"]{
     margin-right: 10px;
+}
+
+.check-label,
+.radio-label{
+    line-height: 1.5em;
 }
 
 #zip{
@@ -129,6 +182,10 @@ MEDIA QUERIES
 
 @media screen and (min-width: 768px) {
 
+    .content-break p{
+        margin-bottom: 2em;
+    }
+    
     .column{
         display: flex;
         flex-direction: row;

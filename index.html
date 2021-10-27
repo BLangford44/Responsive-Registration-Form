@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="main-header">
-        <div class="wrapper">
+        <div>
             <h1 id="header-title">THE CODE REVIEW</h1>
         </div>
     </header>
@@ -25,16 +28,17 @@
             <form>
                 <fieldset>
                     <legend>
-                        <h2>Contact Info</h2>
+                        <h2 class="leg-header">Contact Info</h2>
                     </legend>
                     <div class="column">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="user-name" placeholder="Required" required>
+                        <input type="text" class="required" id="name" name="user-name" placeholder="Required" required>
                     </div>
 
                     <div class="column">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="user-email" placeholder="Required" required>
+                        <input type="email" class="required" id="email" name="user-email" placeholder="Required"
+                            required>
                     </div>
 
                     <div class="column">
@@ -43,18 +47,18 @@
                     </div>
 
                     <div class="column">
-                        <label for="address">Street <Address></Address></label>
-                        <input type="text" id="address" name="user-address">
+                        <label for="address">Street Address</label>
+                        <input type="text" id="address" name="user-address" placeholder="Please Enter Your Address">
                     </div>
 
                     <div class="column">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="user-city">
+                        <input type="text" id="city" name="user-city" placeholder="Please Enter Your City">
                     </div>
 
                     <div class="column">
                         <label for="state">State</label>
-                        <select name="state" id=user-state>
+                        <select id="state" name=user-state>
                             <option value="">Choose State</option>
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
@@ -72,26 +76,32 @@
 
                 <fieldset>
                     <legend>
-                        <h2>Newsletter</h2>
+                        <h2 class="leg-header">Newsletter</h2>
                     </legend>
-                    <p>Select the newsletters you would like to receive.</p>
+                    <p>Select the newsletters you would like to receive</p>
                     <div class="check-opt">
-                        <div><input type="checkbox" id="check-one"><label for="check-one">HTML News</label></div>
-                        <div><input type="checkbox" id="check-two"><label for="check-two">CSS News</label></div>
-                        <div><input type="checkbox" id="check-three"><label for="check-three">Javascript News</label>
+                        <div><input type="checkbox" id="check-one" name="news-type"><label class="check-label"
+                                for="check-one">HTML News</label></div>
+                        <div><input type="checkbox" id="check-two" name="news-type"><label class="check-label"
+                                for="check-two">CSS News</label></div>
+                        <div><input type="checkbox" id="check-three" name="news-type"><label class="check-label"
+                                for="check-three">Javascript News</label>
                         </div>
                     </div>
 
                     <p>Newsletter format</p>
                     <div class="radio-opt">
-                        <div><input type="radio" name="format" id="radio-one"><label for="radio-one">HTML</label></div>
-                        <div><input type="radio" name="format" id="radio-two"><label for="radio-two">Plain text</label>
+                        <div><input type="radio" name="format" id="radio-one" value="html"><label class="radio-label"
+                                for="radio-one">HTML</label></div>
+                        <div><input type="radio" name="format" id="radio-two" value="plain-text"><label
+                                class="radio-label" for="radio-two">Plain text</label>
                         </div>
                     </div>
 
                     <div class="column">
-                        <p>Other topics you'd like to hear about</p>
-                        <textarea id="other" name="other-info"></textarea>
+                        <label>Other topics you'd like to hear about</label>
+                        <textarea id="other" name="other-info"
+                            placeholder="Please enter any other topics you would like to here about here."></textarea>
                     </div>
                 </fieldset>
                 <div class=column>
@@ -103,5 +113,4 @@
             <p class="copyright">Copyright The Code Review</p>
         </footer>
     </div>
-
 </body> <!-- End Body -->
